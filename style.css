@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Mono', monospace;
+}
+
+html, body {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(120deg, #000, #333); /* Dark gradient background */
+  color: white;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  width: 450px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+/* Top image styling */
+.container .top-image {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+  border-radius: 15px; /* Rounded corners */
+  border: 3px solid grey; /* Grey border around the image */
+  opacity: 0.8;
+}
+
+/* Header styling */
+.container header {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Input field styling */
+.container form .field {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.container form .field input {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  transition: 0.3s ease;
+}
+
+.container form .field input:focus {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.container form .field input {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background: white; /* Set to white */
+  color: black; /* Set text color to black for contrast */
+  transition: 0.3s ease;
+}
+
+/* Password strength indicator */
+.indicator {
+  display: none;
+  margin: 15px 0;
+}
+
+.indicator span {
+  height: 10px;
+  width: 100%;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 0 5px;
+  transition: all 0.5s ease-in-out;
+}
+
+.indicator span.weak.active {
+  background: #ff4757;
+}
+
+.indicator span.medium.active {
+  background: orange;
+}
+
+.indicator span.strong.active {
+  background: #23ad5c;
+}
+
+.text {
+  display: none;
+  font-size: 18px;
+  margin-top: 15px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.text.weak {
+  color: #ff4757;
+}
+
+.text.medium {
+  color: orange;
+}
+
+.text.strong {
+  color: #23ad5c;
+}
+
